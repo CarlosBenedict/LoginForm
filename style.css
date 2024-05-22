@@ -1,0 +1,194 @@
+/* General and body styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("images/hero-bg.jpg") center / cover no-repeat;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    padding: 22px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar .links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar .links a:hover {
+    color: #19e8ff;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: -20px;
+}
+
+/* Button styles */
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Popup form styles */
+.form-popup {
+    display: none; /* Initially hide the form */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 750px;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.form-popup.show {
+    display: block; /* Show form when class 'show' is added */
+}
+
+.form-popup .form-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box .form-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-box .form-content {
+    width: 100%;
+    padding: 35px;
+}
+
+.form-box a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+/* Form input styles */
+form button {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 3px;
+    margin: 25px 0;
+    color: #fff;
+    cursor: pointer;
+    background: #00bcd4;
+}
+
+form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form .input-field input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    border-radius: 3px;
+    border: 1px solid #717171;
+}
+
+.input-field input:focus {
+    border-color: #00bcd4;
+}
+
+form .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #717171;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.2s ease;
+}
+
+.forgotpass {
+    margin-top: 7px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    top: 5px;
+    left: 15px;
+    color: #00bcd4;
+    font-size: 0.75rem;
+}
